@@ -67,3 +67,23 @@ tab2= np.array([2,1,0])
 
 covariance= np.cov(tab1,tab2)
 print(covariance)
+
+#----------------------------------------------------------------------
+#Exercice07 (la formule) :
+import math
+
+# Constants
+C = 50
+H = 30
+
+# formule Q = Carré racine de [(2 * C * D)/H]
+def formule(D):
+    Q = math.sqrt((2 * C * D) / H)
+    return round(Q)  # valeur entier de q
+
+sequance = input("donnez les valuers de D (séparer par des virgules ex: a,b,c): ")
+D_values = [int(x) for x in sequance.split(',')]
+print(D_values)
+
+results = [formule(D) for D in D_values]
+print (results)
